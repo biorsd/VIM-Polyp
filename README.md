@@ -6,7 +6,7 @@ A multimodal benchmark dataset & code base for colorectal polyp research
 *(Colonoscopy videos • Histopathology images • IHC biomarker scores)*  
 
 [![Zenodo](https://img.shields.io/badge/Data-Zenodo-%23009788)](https://doi.org/10.5281/zenodo.15388073)
-[![Kaggle](https://img.shields.io/badge/Data-Kaggle-blue)](https://www.kaggle.com/datasets/refikasultandogan/vim-polyp)
+[![Kaggle](https://img.shields.io/badge/Data-Kaggle-blue)](https://www.kaggle.com/datasets/refikasultandogan/colonpolyp/data)
 [![License: ODbL](https://img.shields.io/badge/License-ODbL-brightgreen.svg)](LICENSE)
 
 ---
