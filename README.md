@@ -16,7 +16,7 @@ This repo hosts **all notebooks & helper scripts** that accompany
 
 > **Doğan RS\*, Akay E, Doğan S, Yılmaz B.**  
 > *VIM‑Polyp: Multimodal Colon Polyp Dataset with Video, Histopathology, and Protein Expression*  
-> *Scientific Data* (under review, 2025)
+> *Nature Scientific Data* (2025)
 
 The full dataset mixes three modalities gathered from **201 patients / 399 polyps**:
 
