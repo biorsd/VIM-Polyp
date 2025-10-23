@@ -77,11 +77,78 @@ How to cite?
 
 @article{Dogan2025_SciData,
   author  = {Doğan, R. S. and Akay, E. and Doğan, S. and Yılmaz, B.},
-  title   = {VIM‑Polyp: Multimodal Colon Polyp Dataset with Video, Histopathology, and Protein Expression},
+  title   = {VIM-Polyp: Multimodal Colon Polyp Dataset with Video, Histopathology, and Protein Expression},
   journal = {Scientific Data},
-  year    = {2025},
-  note    = {under review}
+  year    = {2025}
 }
+
+@article{Dogan2024_FrontOncol,
+  author  = {Doğan, R. S. and Yılmaz, B.},
+  title   = {Histopathology image classification: highlighting the gap between manual analysis and AI automation},
+  journal = {Frontiers in Oncology},
+  volume  = {13},
+  pages   = {1325271},
+  year    = {2024},
+  doi     = {10.3389/fonc.2023.1325271},
+  url     = {https://www.frontiersin.org/journals/oncology/articles/10.3389/fonc.2023.1325271/full}
+}
+
+
+@article{Dogan2024_IntelMed,
+  author  = {Doğan, R. S. and Akay, E. and Doğan, S. and Yılmaz, B.},
+  title   = {Hyperplastic and tubular polyp classification using machine learning and feature selection},
+  journal = {Intelligence-Based Medicine},
+  volume  = {10},
+  pages   = {100177},
+  year    = {2024},
+  doi     = {10.1016/j.ibmed.2024.100177},
+  url     = {https://linkinghub.elsevier.com/retrieve/pii/S2666521224000449}
+}
+
+
+@inproceedings{Dogan2018_TIPTEKNO,
+  author  = {Doğan, R. S. and Yılmaz, B.},
+  title   = {Polyp localization in colonoscopy images using vessel density},
+  booktitle = {2018 Medical Technologies National Congress (TIPTEKNO)},
+  pages   = {1--4},
+  year    = {2018}
+}
+
+@article{Dogan2024_IJIST,
+  author  = {Kaçmaz, R. N. and Doğan, R. S. and Yılmaz, B.},
+  title   = {A comprehensive study on automatic non‐informative frame detection in colonoscopy videos},
+  journal = {International Journal of Imaging Systems and Technology},
+  volume  = {34},
+  number  = {1},
+  pages   = {e23017},
+  year    = {2024}
+}
+
+@article{Dogan2021_EuroBiotech,
+  author  = {Doğan, R. and Yılmaz, B.},
+  title   = {Comparison of deep learning and conventional machine learning methods for classification of colon polyp types},
+  journal = {EuroBiotech Journal},
+  volume  = {5},
+  number  = {1},
+  year    = {2021}
+}
+
+@inproceedings{Dogan2023_EMR,
+  author  = {Doğan, R. S. and Akay, E. and Doğan, S. and Yılmaz, B.},
+  title   = {Feature Extraction and Biomarker Analysis for Differentiating Colon Polyps from Colonoscopic Images},
+  booktitle = {The 12th Conference of Eastern Mediterranean Region of International Federation of Automatic Control (IFAC)},
+  year    = {2023}
+}
+
+@phdthesis{Dogan2023_AGU,
+  author  = {Doğan, R. S.},
+  title   = {Artificial intelligence assisted prognostic marker determination from colonoscopy and histopathology images for colon polyps},
+  school  = {Abdullah Gül University},
+  year    = {2023}
+}
+
+
+
 
 Acknowledgements
 Data collection was funded by TÜBİTAK 1001 — Grant 120E204 and forms part of the PhD thesis “Artificial Intelligence Assisted Prognostic Marker Determination from Colonoscopy and Histopathology Images for Colon Polyps” (R.S. Doğan, 2023).
