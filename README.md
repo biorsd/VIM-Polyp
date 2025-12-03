@@ -24,7 +24,7 @@ The full dataset mixes three modalities gathered from **201 patients / 399 poly
 |----------|--------|--------|---------|
 | Colonoscopy videos | 202 raw, 133 labelled (`.avi`, 422 min) | `colonVideosWithLabels/` | Endoscopic appearance & localisation |
 | Histopathology images | 1 903 WSIs patches (`.tiff`) at 5 magnifications | `pathoImagesWithLabels/` | Cellular morphology |
-| Immunohistochemistry (IHC) | 6 biomarkers × 383 polyps | `ihc_data.xlsx` | Protein‑level phenotype |
+| Immunohistochemistry (IHC) | 6 biomarkers × 394 polyps | `ihc_data.xlsx` | Protein‑level phenotype |
 
 Each patient/polyp carries a **shared ID** so you can fuse the three tracks.
 
