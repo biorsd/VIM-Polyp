@@ -1,9 +1,5 @@
 # VIM-Polyp
-VIM-Polyp: A Multimodal Dataset of Colonoscopy Videos, Histopathology Images, and Protein Expression Levels from Colorectal Polyps
-
-# VIM‑Polyp Repository  
-A multimodal benchmark dataset & code base for colorectal polyp research  
-*(Colonoscopy videos • Histopathology images • IHC biomarker scores)*  
+A multimodal benchmark dataset & code base for colorectal polyp research (colonoscopy videos, histopathology images, IHC biomarker scores).
 
 [![Zenodo](https://img.shields.io/badge/Data-Zenodo-%23009788)](https://doi.org/10.5281/zenodo.15388073)
 [![Kaggle](https://img.shields.io/badge/Data-Kaggle-blue)](https://www.kaggle.com/datasets/refikasultandogan/colonpolyp/data)[![License: CC BY 4.0](https://img.shields.io/badge/License-CC--BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
@@ -30,44 +26,67 @@ Each patient/polyp carries a **shared ID** so you can fuse the three tracks.
 
 ---
 
-## 2  Quick start  
+## 2  Quick start
 
 ```bash
-# ① clone code
-git clone https://github.com/YOUR‑ORG/VIM-Polyp.git
+# clone the code
+git clone https://github.com/biorsd/VIM-Polyp.git
 cd VIM-Polyp
 
-# ② create environment
-conda env create -f environment.yml      # or pip install -r requirements.txt
-conda activate vimpolyp
+# create the environment
+conda env create -f environment.yml && conda activate vimpolyp   # or: pip install -r requirements.txt
 
-# ③ fetch data (choose ONE):
-python scripts/download_zenodo.py  --doi 10.5281/zenodo.15388073
-#        ‑‑or‑‑
-kaggle datasets download refikasultandogan/colon-polyp-dataset -p data/ --unzip
+# fetch the data (choose ONE) -- both write into ./data by default
+python scripts/download_zenodo.py                  # public, no account needed
+#        --or--
+python scripts/download_kaggle.py                  # requires ~/.kaggle/kaggle.json
 
-# ④ open example notebook
-jupyter lab notebooks/colonvideoswithlabel.ipynb
+# open an example notebook -- paths resolve automatically, see notebooks/README.md
+jupyter lab notebooks/ihc-part.ipynb
+```
 
-3  Repository layout
+Every notebook's first cell auto-detects where the data lives (Kaggle, Colab,
+or your local `./data`), so you never have to hand-edit a file path. Override
+the defaults at any time with:
+
+```bash
+export VIMPOLYP_DATA_DIR=/path/to/data
+export VIMPOLYP_OUTPUT_DIR=/path/to/outputs
+```
+
+## 3  Repository layout
+
+```
 VIM-Polyp/
 ├── notebooks/
-│   ├── colonvideoswithlabel.ipynb       # Video preprocessing, labelling demo
-│   ├── colonvideoswithlabels.ipynb      # Alternative pipe incl. vessel‑density filter
-│   ├── pathoimageswithlabels.ipynb      # Histopath patch loader & stain‑norm
-│   ├── ihc-part.ipynb                   # Exploratory IHC stats & Shapiro–Wilk tests
-│   └── summarypatientsihc.ipynb         # Patient‑level summary dashboard
+│   ├── README.md                        # what each notebook does & what data it needs
+│   ├── ihc-part.ipynb                   # Exploratory IHC stats & Shapiro-Wilk tests
+│   ├── pathoimageswithlabels.ipynb      # Histopath patch metadata loader & plots
+│   ├── colonvideoswithlabel.ipynb       # Cross-modality overview & IHC plots
+│   ├── colonvideoswithlabels.ipynb      # Video pipeline: key-frame extraction + ResNet50
+│   ├── summarypatientsihc.ipynb         # Patient-level summary dashboard
+│   └── GUST_pathoIHC.ipynb              # Histopathology image + IHC feature fusion (ViT/PyTorch)
 ├── scripts/
-│   └── download_zenodo.py               # DOI‑based bulk fetch helper
-├── data/                                # <-- you download into here
-│   ├── colonVideosWithLabels/
-│   ├── pathoImagesWithLabels/
-│   └── *.xlsx
+│   ├── download_zenodo.py               # DOI-based bulk fetch helper (Zenodo REST API)
+│   └── download_kaggle.py               # Kaggle API download helper
+├── src/
+│   └── vimpolyp_paths.py                # DATA_DIR / OUTPUT_DIR auto-detection, shared by every notebook
+├── data/                                # <-- you download into here (git-ignored)
+│   ├── colonVideosWithLabels/
+│   ├── 10x/, 20x/, ...                  # histopathology patch magnifications
+│   └── *.xlsx
+├── outputs/                             # <-- generated plots/figures land here (git-ignored)
 ├── README.md
 ├── LICENSE
-└── environment.yml / requirements.txt
+├── requirements.txt
+└── environment.yml
+```
 
-How to cite?
+## 4  Citation
+
+If you use this dataset or code, please cite:
+
+```bibtex
 @dataset{Dogan2025_VIMPolyp,
   author       = {Doğan, Refika Sultan and Akay, Ebru and Doğan, Serkan and Yılmaz, Bülent},
   title        = {VIM-Polyp: Multimodal Colon Polyp Dataset (v1.0)},
@@ -147,15 +166,16 @@ How to cite?
   year    = {2023}
 }
 
+```
 
+## 5  Acknowledgements
 
-
-Acknowledgements
-Data collection was funded by TÜBİTAK 1001 — Grant 120E204 and forms part of the PhD thesis “Artificial Intelligence Assisted Prognostic Marker Determination from Colonoscopy and Histopathology Images for Colon Polyps” (R.S. Doğan, 2023).
+Data collection was funded by TÜBİTAK 1001 — Grant 120E204 and forms part of the PhD thesis
+"Artificial Intelligence Assisted Prognostic Marker Determination from Colonoscopy and
+Histopathology Images for Colon Polyps" (R.S. Doğan, 2023).
 We thank Kayseri City Hospital Gastroenterology & Pathology Departments for their support.
 
-Contact
-Questions or issues? Open an issue or contact
-Dr Refika Sultan Doğan
-• doganrefikasultan@gmail.com
+## 6  Contact
 
+Questions or issues? Open an issue on this repository, or contact Dr Refika Sultan Doğan
+at doganrefikasultan@gmail.com.
