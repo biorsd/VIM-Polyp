@@ -66,6 +66,12 @@ VIM-Polyp/
 │   ├── colonvideoswithlabels.ipynb      # Video pipeline: key-frame extraction + ResNet50
 │   ├── summarypatientsihc.ipynb         # Patient-level summary dashboard
 │   └── GUST_pathoIHC.ipynb              # Histopathology image + IHC feature fusion (ViT/PyTorch)
+├── projects/                            # runnable example ML / analysis projects
+│   ├── README.md
+│   ├── common.py                       # shared data loaders (reuse src/vimpolyp_paths.py)
+│   ├── polyp_type_classifier.py        # predict polyp type from IHC biomarkers (RandomForest)
+│   ├── ihc_biomarker_analysis.py       # Kruskal–Wallis + correlation analysis of biomarkers
+│   └── histopathology_cnn.py           # ResNet18 transfer-learning image classifier
 ├── scripts/
 │   ├── download_zenodo.py               # DOI-based bulk fetch helper (Zenodo REST API)
 │   └── download_kaggle.py               # Kaggle API download helper
