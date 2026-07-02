@@ -1,0 +1,28 @@
+# Core data handling
+numpy>=1.24
+pandas>=2.0
+openpyxl>=3.1          # required by pandas to read .xlsx files (ihc_data.xlsx, colonVideosWithLabels.xlsx, ...)
+
+# Plotting / stats
+matplotlib>=3.7
+seaborn>=0.12
+scipy>=1.10             # Shapiro-Wilk normality tests, etc. (ihc-part.ipynb)
+scikit-learn>=1.3       # train_test_split, LabelEncoder, StandardScaler (GUST_pathoIHC.ipynb)
+
+# Imaging / video
+opencv-python>=4.8      # cv2, video frame + key-frame extraction
+Pillow>=10.0             # PIL, histopathology patch loading
+
+# Deep learning (GUST_pathoIHC.ipynb, ResNet50 key-frame embeddings)
+torch>=2.1
+torchvision>=0.16
+transformers>=4.35
+tensorflow>=2.14
+
+# Notebook runtime
+jupyterlab>=4.0
+ipython>=8.0
+
+# Dataset download helpers (scripts/download_zenodo.py, scripts/download_kaggle.py)
+requests>=2.31
+kaggle>=1.6
